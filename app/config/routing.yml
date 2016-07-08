@@ -1,0 +1,17 @@
+authentication:
+    resource: "@AuthenticationBundle/Controller/"
+    type:     annotation
+    prefix:   /api/authentication
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+    
+fos_user:
+    resource: "@AuthenticationBundle/Resources/config/routing.yml"
+    prefix:   /authentication
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+

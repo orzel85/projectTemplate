@@ -1,0 +1,8 @@
+services:
+    authentication.user_service:
+        class: AuthenticationBundle\Service\User\UserService
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    authentication.success_logout_handler:
+        class: AuthenticationBundle\Security\SuccessLogoutHandler

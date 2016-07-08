@@ -1,0 +1,14 @@
+services:
+    authentication.validator.duplicate_user:
+        class: AuthenticationBundle\Validators\Constraints\DuplicateUserValidator
+        arguments:
+            - "@authentication.repositories.user"
+        tags:
+            - { name: validator.constraint_validator, alias: authentication_validator_duplicate_user }
+            
+    authentication.validator.duplicate_email:
+        class: AuthenticationBundle\Validators\Constraints\DuplicateEmailValidator
+        arguments:
+            - "@authentication.repositories.user"
+        tags:
+            - { name: validator.constraint_validator, alias: authentication_validator_duplicate_email }

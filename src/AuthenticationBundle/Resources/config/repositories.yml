@@ -1,0 +1,7 @@
+services:
+    authentication.repositories.user:
+        class: AuthenticationBundle\Repository\UserRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - AuthenticationBundle\Entity\User

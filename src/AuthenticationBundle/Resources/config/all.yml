@@ -1,0 +1,4 @@
+imports:
+    - { resource: repositories.yml }
+    - { resource: services.yml }
+    - { resource: validators.yml }
